@@ -11,6 +11,11 @@ def index():
 def about():
     return { 'page': 'about' }
 
+@app.route('/services')
+def services():
+    return { 'page': 'services' }
+
+
 
 
 PORT = os.environ.get('PORT', 5000)
