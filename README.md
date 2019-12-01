@@ -45,10 +45,17 @@ run:
 
 2. docker create
 
-3. heroku stack:set container --app appnamehere
+3. 
+  heroku stack:set container --app appnamehere
+  heroku stack:set container -a appnamehere
 
 4. git push heroku master
 
 5. heroku open 
+
+
+6. run below cmd to tunnel into the dyno
+heroku run bash
+
 
 ** Profile is not required
