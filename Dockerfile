@@ -7,6 +7,14 @@ COPY . .
 
 RUN pip install -r requirements.txt 
 
+## test with non-root user cause heroku ... 
+## deploys with non-root user
+## for ubuntu (non-alpine) to run app as other user- non-root
+# RUN adduser -m appuser
+## for alpine to run app as other user- non-root
+RUN adduser -D appuser
+USER appuser
+
 # EXPOSE 5000
 
 # ENV PORT 5000
